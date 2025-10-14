@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import React from "react";
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Dashboard from './Dashboard';
 
 function Register() {
@@ -61,12 +62,10 @@ function Register() {
 
 function App() {
     return (
-        <Router>
             <Routes>
                 <Route path="/" element={<Register />} />
                 <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
-        </Router>
     );
 }
 
