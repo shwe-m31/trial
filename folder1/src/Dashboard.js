@@ -1,19 +1,27 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 
 const Dashboard = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const userEmail = location.state?.userEmail || 'user@example.com';
 
     const handleLogout = () => {
-        // Add logout logic here - redirect to login page
-        window.location.href = '/';
+        navigate('/'); // redirect to login page
     };
 
     const handleProfileClick = () => {
-        // Add profile menu toggle logic here
         alert('Profile menu to be implemented');
+    };
+
+    // 🧭 New navigation handlers
+    const goToProfile = () => {
+        navigate('/profile', { state: { userEmail } });
+    };
+
+    const goToSettings = () => {
+        navigate('/settings');
     };
 
     return (
@@ -66,8 +74,9 @@ const Dashboard = () => {
                     <div className="content-card">
                         <h3>Quick Actions</h3>
                         <div className="action-buttons">
-                            <button className="action-btn">Edit Profile</button>
-                            <button className="action-btn">Settings</button>
+                            {/* Navigation buttons */}
+                            <button className="action-btn" onClick={goToProfile}>Go to Profile</button>
+                            <button className="action-btn" onClick={goToSettings}>Go to Settings</button>
                             <button className="action-btn">Help</button>
                         </div>
                     </div>

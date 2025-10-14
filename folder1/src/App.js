@@ -4,6 +4,26 @@ import React from "react";
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Dashboard from './Dashboard';
 
+// --- Simple placeholder pages ---
+function Profile() {
+    return (
+        <div className="page-container">
+            <h2>Profile Page</h2>
+            <p>This is where you can view or edit your profile details.</p>
+        </div>
+    );
+}
+
+function Settings() {
+    return (
+        <div className="page-container">
+            <h2>Settings Page</h2>
+            <p>Here you can adjust your account and app settings.</p>
+        </div>
+    );
+}
+
+// --- Your existing Register component ---
 function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -25,7 +45,7 @@ function Register() {
             const result = await response.text();
             alert(result);
 
-            // Navigate to dashboard with state
+            // Navigate to dashboard with user email
             navigate('/dashboard', { state: { userEmail: email } });
 
         } catch (err) {
@@ -60,12 +80,15 @@ function Register() {
     );
 }
 
+// --- App routing setup ---
 function App() {
     return (
-            <Routes>
-                <Route path="/" element={<Register />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-            </Routes>
+        <Routes>
+            <Route path="/" element={<Register />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Settings />} />
+        </Routes>
     );
 }
 
