@@ -46,13 +46,13 @@
 
 /* Focus effect */
 .login-container input:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+  border-color: #8f1808;
+  box-shadow: 0 0 5px rgba(214, 234, 102, 0.5);
 }
 
 /* Button style */
 .login-container button {
-  background: #667eea;
+  background: #b8e644;
   color: white;
   border: none;
   padding: 12px 0;
@@ -66,7 +66,7 @@
 
 /* Button hover effect */
 .login-container button:hover {
-  background: #5a67d8;
+  background: #e11616;
 }
 
 /* Optional subtle animation */
