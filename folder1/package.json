@@ -18,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "homepage": "https://shwe-m31.github.io/trial",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
