@@ -18,9 +18,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Clean npm cache
+        run: npm cache clean --force
+
       - name: Install dependencies
         working-directory: ./folder1
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build React app
         working-directory: ./folder1
