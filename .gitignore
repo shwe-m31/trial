@@ -1,0 +1,13 @@
+# React (folder1)
+folder1/node_modules/
+folder1/build/
+
+# Spring Boot (folder2)
+folder2/target/
+folder2/*.log
+folder2/data/
+
+# IDE and system files
+.idea/
+.vscode/
+.DS_Store
