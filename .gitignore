@@ -5,7 +5,10 @@ folder1/build/
 # Spring Boot (folder2)
 folder2/target/
 folder2/*.log
+<<<<<<< HEAD
 folder2/data/
+=======
+>>>>>>> 271661c6641c879e836a2a530590d8e92845e223
 
 # IDE and system files
 .idea/

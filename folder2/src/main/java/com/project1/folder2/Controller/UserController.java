@@ -1,7 +1,10 @@
 package com.project1.folder2.Controller;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> 271661c6641c879e836a2a530590d8e92845e223
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.project1.folder2.Entity.User;
@@ -23,9 +26,12 @@ public class UserController {
     public String registerUser(@RequestBody User user) {
         return userService.registerUser(user);
     }
+<<<<<<< HEAD
 
     @GetMapping("/all")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
+=======
+>>>>>>> 271661c6641c879e836a2a530590d8e92845e223
 }

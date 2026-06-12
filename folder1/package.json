@@ -14,9 +14,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+=======
+    "preinstall": "npx npm-force-resolutions",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "homepage": "https://shwe-m31.github.io/trial",
+>>>>>>> 271661c6641c879e836a2a530590d8e92845e223
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
